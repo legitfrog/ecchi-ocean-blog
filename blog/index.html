@@ -1,0 +1,34 @@
+---
+layout: default
+categories: blog
+---
+
+<main>
+  <div class="twelve columns content">
+    <h1>Blog</h1>
+  </div>
+
+  <div class="twelve columns content">
+    {% for post in site.posts limit:1 %}
+    <article class="post">
+      <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
+      <div class="entry">
+        {{ post.content }}
+      </div>
+      <hr>
+      <p>Written: {{post.date | date: "%B %e, %Y"}}</p>
+    </article>
+    {% endfor %}
+  </div>
+
+  <div class="twelve columns content">
+    <h3>Archive</h3>
+    <ul>
+      {% for post in site.posts %}
+      <li>
+        <a href="{{ post.url }}">{{ post.title }}</a> - {{post.date | date: "%B %e, %Y"}}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</main>

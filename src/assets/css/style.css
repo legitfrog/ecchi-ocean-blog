@@ -1,0 +1,194 @@
+
+/* Fonts */
+
+@font-face {
+  font-family: "Inconsolata";
+  font-weight: 400;
+  font-style: normal;
+  src:local("Inconsolata"),
+  url("/assets/fonts/Inconsolata-Regular.woff2"),
+  url("/assets/fonts/Inconsolata-Regular.woff"),
+  url("/assets/fonts/Inconsolata-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Inconsolata";
+  font-weight: 700;
+  font-style: normal;
+  src:local("Inconsolata Bold"),
+  url("/assets/fonts/Inconsolata-Bold.woff2"),
+  url("/assets/fonts/Inconsolata-Bold.woff"),
+  url("/assets/fonts/Inconsolata-Bold.ttf");
+}
+
+/* Main CSS */
+
+body {
+font-family: "Inconsolata", monospace;
+color: #929EFC;
+background-color:#212121;
+background-image: linear-gradient(30deg, #131313 12%, transparent 12.5%, transparent 87%, #131313 87.5%, #131313),
+linear-gradient(150deg, #131313 12%, transparent 12.5%, transparent 87%, #131313 87.5%, #131313),
+linear-gradient(30deg, #131313 12%, transparent 12.5%, transparent 87%, #131313 87.5%, #131313),
+linear-gradient(150deg, #131313 12%, transparent 12.5%, transparent 87%, #131313 87.5%, #131313),
+linear-gradient(60deg, #424242 25%, transparent 25.5%, transparent 75%, #424242 75%, #424242),
+linear-gradient(60deg, #424242 25%, transparent 25.5%, transparent 75%, #424242 75%, #424242);
+background-size:80px 140px;
+background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+
+/*
+background:
+linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+background-color: #131313;
+background-size: 20px 20px; */
+}
+
+.content {
+  background-color: rgba(19,19,19,0.9);
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  -khtml-border-radius: 10px;
+  padding: 20px 20px 1px 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+main {
+  padding-top: 75px;
+}
+
+b {
+  color: #D6DAE4;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-align: center;
+}
+
+.luxbar-item {
+  font-size: 1.6rem;
+}
+
+footer p {
+  color: #929EFC;
+}
+
+footer a {
+  color: #D6DAE4;
+  text-decoration: none;
+}
+
+.luxbar a:hover,
+.luxbar a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+/*
+::-moz-selection {
+background-color: #a7baaa;
+}
+
+::selection {
+  background-color: #a7baaa;
+} */
+
+.footnote {
+  font-size: 1.4rem;
+}
+
+.luxbar-fixed {
+  width: 100%;
+  max-width: 768px;
+}
+
+.aside-info {
+  display: inline;
+}
+
+.aside-title {
+  display: inline-block;
+  width: 100px;
+}
+
+.rwd-break {
+  display: block;
+}
+
+.desktop-screenshot {
+  z-index: 1;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin-left:5px;
+  width: 75%;
+}
+
+.phone-screenshot {
+  top: 20%;
+  right: 1rem;
+  z-index: 5;
+  background-image: url(/assets/images/phone.svg);
+  padding: 6% 2% 0;
+  width: 30%;
+  display: block;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.project-hero {
+  position:relative;
+  margin-bottom:0.75rem;
+  overflow:hidden;
+}
+
+.copyright {
+  display: block;
+  float: none;
+}
+
+/* Media Queries */
+
+@media (min-width: 320px) {
+.luxbar-fixed  {
+  width: 87.5%;
+}
+}
+
+@media (min-width: 340px) {
+.luxbar-fixed  {
+  width: 89%;
+}
+}
+
+@media (min-width: 400px) {
+.luxbar-fixed {
+  width: 85%;
+}
+.footnote {
+  font-size: 1.6rem;
+}
+}
+
+@media (min-width: 500px) {
+.copyright {
+  float: right;
+}
+}
+
+@media (min-width: 550px) {
+.luxbar-fixed {
+  width: 80%;
+}
+.aside-info {
+  display: block;
+}
+.rwd-break {
+  display: none;
+}
+}
